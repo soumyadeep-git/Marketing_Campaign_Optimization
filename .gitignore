@@ -1,0 +1,9 @@
+# Exclude virtual environment folders
+venv/
+.env/
+env/
+*.pyc
+__pycache__/
+
+# Exclude macOS system files
+.DS_Store
