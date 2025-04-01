@@ -1,9 +1,9 @@
-# Exclude virtual environment folders
+# Exclude virtual environment folders from uploading
 venv/
 .env/
 env/
 *.pyc
 __pycache__/
 
-# Exclude macOS system files
+# Exclude macOS system files from uploading
 .DS_Store
