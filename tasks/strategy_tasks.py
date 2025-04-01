@@ -1,5 +1,7 @@
 from crewai import Task
 
+# Will take care of the strategy optimization task 
+
 def strategy_optimization_task(agent, context_task):
     """Creates the task for optimizing campaign strategy."""
     return Task(
