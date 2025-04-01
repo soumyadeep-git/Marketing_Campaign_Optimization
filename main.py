@@ -2,9 +2,9 @@ import os
 import time
 import traceback
 
-# --- Environment Variables (ADD THESE AT THE VERY TOP) ---
+# --- Environment Variables ---
 # Use the OpenAI standard names as LiteLLM often looks for these for compatible endpoints
-# Use the 'ollama/<model>' format for clarity with LiteLLM
+# Using the 'ollama/<model>' format for clarity with LiteLLM
 os.environ["OPENAI_API_BASE"] = "http://localhost:11434/v1" # Use the v1 endpoint for OpenAI compatibility
 os.environ["OPENAI_MODEL_NAME"] = "ollama/llama3"        # Explicitly mention ollama provider and model
 os.environ["OPENAI_API_KEY"] = "NA"                       # Required by LiteLLM, value doesn't matter for Ollama
@@ -21,7 +21,7 @@ except ImportError:
     litellm = None
 except Exception as e:
     print(f"--- Error enabling LiteLLM verbose logging: {e} ---")
-# --- End Logging ---
+# --- End of Logging ---
 
 from crewai import Crew, Process
 from langchain_ollama import ChatOllama
@@ -35,9 +35,9 @@ from tasks.strategy_tasks import strategy_optimization_task
 from tasks.report_tasks import performance_report_task
 
 # --- Configuration ---
-# Ensure this model name MATCHES the one in OPENAI_MODEL_NAME if using that format
+
 OLLAMA_MODEL = 'ollama/llama3' # Use the same name as in the env var for consistency
-# OLLAMA_MODEL = 'llama3' # Alternatively, try using just the base name and rely on base_url
+
 
 OLLAMA_BASE_URL = "http://localhost:11434" # Keep this for ChatOllama direct init
 
@@ -47,7 +47,7 @@ if not os.path.exists("output"):
 
 def get_llm():
     """Initializes the ChatOllama LLM."""
-    # Use the model name defined in CONFIGURATION above
+    # the model name is defined in CONFIGURATION above
     model_to_init = OLLAMA_MODEL
     print(f"--- Initializing LLM: {model_to_init} ---")
     try:
@@ -95,7 +95,7 @@ def run_crew():
         tasks=[task1, task2, task3],
         process=Process.sequential,
         llm=llm,  # Explicitly pass the configured LLM instance
-        verbose=True # Keep boolean verbose setting
+        verbose=True 
     )
 
     print("\n---Starting Marketing Optimization Crew ---")
