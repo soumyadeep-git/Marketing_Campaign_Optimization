@@ -12,10 +12,10 @@ pip install -r requirements.txt
 
 For best results, use a virtual environment:
 
-#3 RUN THE PROJECT
+# 3. RUN THE PROJECT
 Execute the main application:
 python main.py
 
-#4 ACCESS THE REPORT
+# 4. ACCESS THE REPORT
 The project report PDF is available in:
 root/Performance improvement report.pdf
