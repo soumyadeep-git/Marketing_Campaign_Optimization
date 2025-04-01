@@ -1,0 +1,6 @@
+# Core CrewAI framework
+crewai
+crewai-tools
+
+# Langchain integration for Ollama
+langchain-ollama==0.1.2 
