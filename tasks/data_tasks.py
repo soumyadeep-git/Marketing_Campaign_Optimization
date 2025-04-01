@@ -1,5 +1,7 @@
 from crewai import Task
 
+# this will take care of the collection of the data
+
 def data_collection_task(agent):
     """Creates the task for collecting marketing data."""
     return Task(
