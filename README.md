@@ -13,7 +13,10 @@ pip install -r requirements.txt
 
 For best results, use a virtual environment:
 
-# 3. RUN THE PROJECT
+# 3. IN ONE TERMINAL
+run ollama serve
+
+# 4. IN ANOTHER TERMIANL RUN THE PROJECT
 Execute the main application:
 python main.py
 
